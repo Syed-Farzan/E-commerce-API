@@ -43,4 +43,6 @@ app/
 ├── models/
 │   ├── users.py
 │   └── products.py
+├── routers/
+│   ├── id_gen.py
 ```
