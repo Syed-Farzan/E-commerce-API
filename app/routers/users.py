@@ -1,7 +1,7 @@
-from models import user
+from app.models import user
 from fastapi import APIRouter, HTTPException
-import database
-from utils import id_gen
+import app.database as database
+from app.utils import id_gen
 
 router = APIRouter()
 
