@@ -1,14 +1,14 @@
 from fastapi import APIRouter, HTTPException
 from models import product 
 import database
-import uuid
 from typing import Optional
+from utils import id_gen
 
 router = APIRouter()
 
 @router.post('/products', response_model=product.ProductResponse, status_code=201)
 def create_product(data: product.ProductCreate):
-    id = str(uuid.uuid4())
+    id = id_gen.generate_id()
     database.products_db[id] = {**data.model_dump(), 'id': id}
     return database.products_db[id]
 

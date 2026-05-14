@@ -1,13 +1,13 @@
 from models import user
 from fastapi import APIRouter, HTTPException
-import uuid
 import database
+from utils import id_gen
 
 router = APIRouter()
 
 @router.post('/users', status_code=201, response_model= user.UserResponse)
 def register_user(data: user.UserCreate,):
-    user_id = str(uuid.uuid4())
+    user_id = id_gen.generate_id()
     database.users_db[user_id] = {**data.model_dump(), 'id': user_id}
     return database.users_db[user_id]
 
