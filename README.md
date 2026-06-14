@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Mini E-Commerce REST API 🛒
 
 A RESTful backend API for a mini e-commerce platform built with FastAPI and Python.
@@ -76,21 +76,5 @@ The project focuses on clean API design, structured routing, request validation,
 - **Server:** Uvicorn
 - **Validation:** Pydantic V2
 - **Storage:** In-memory Python dictionaries
-- **Environment Management:** python-dotenv
-
----
-
-## 📂 Project Structure
-
-```bash
-app/
-├── main.py
-├── database.py
-├── routers/
-│   ├── users.py
-│   └── products.py
-├── models/
-│   ├── users.py
-│   └── products.py
->>>>>>> 98369923cd11e32cf0c042e517b190c110ec4d8a
+- **Environment Management:** 
 ```
